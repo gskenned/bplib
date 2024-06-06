@@ -13,6 +13,8 @@ int BPL_BC_stop ()|Stop Bundle Cache if started
 
 Persistent Storage (store) store
 
+|API|Description|
+|:- |:- |
 int BPL_file_offload_instantiate|Create File Offload Instance
 int BPL_file_offload_configure|Configure
 int BPL_file_offload_scan|Restore all stored bundles (after restart)
