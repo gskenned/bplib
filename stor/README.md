@@ -1,25 +1,20 @@
 README for stor folder
 
-Storage (STOR) APIs
+**Storage (STOR) APIs**
 
-Bundle Cache (BC) bundle-cache
+**Bundle Cache (BC) bplib/stor/bundle-cache**
 
-|API|Description|
+|Bundle Cache API|Description|
 |:- |:- |
 int BPL_BC_configure (int key, bplib_cache_module_valtype_t vt, const void *val)|Configure Bundle Cache
 int BPL_BC_query (int key, bplib_cache_module_valtype_t vt, const void **val)|Query Bundle Cache telemetry
 int BPL_BC_start ()|Start Bundle Cache if stopped
 int BPL_BC_stop ()|Stop Bundle Cache if started
 
-Persistent Storage (store) store
+**Persistent Storage (file_offload) bplib/stor/store/file_offload.c**
 
-|API|Description|
-|:- |:- |
-int BPL_file_offload_instantiate|Create File Offload Instance
-int BPL_file_offload_configure|Configure
-int BPL_file_offload_scan|Restore all stored bundles (after restart)
-int BPL_file_offload_query|Get HK data
-int BPL_file_offload_start|Create base folder|mkdir|OS_mkdir|
-int BPL_file_offload_stop|Noop
+See [file-offload-api.md](file-offload-api.md).
 
-Queue Manager (QM) queue-manager
+**Queue Manager (QM) queue-manager**
+
+No API
