@@ -14,6 +14,7 @@ output:
 `static int BPL_offload_offload(BPL_file_offload_svc_t *svc, bp_sid_t *sid, BPL_file_offload_pblk_t *pblk)`|Offload a bundle to a file. sid is the Storage ID for the bundle. pblk is a pointer to the bundle Primary Block.
 `static int BPL_offload_restore(BPL_file_offload_svc_t *svc, bp_sid_t sid, BPL_file_offload_pblk_t **pblk_out)`|Restore a bundle from a file. sid is the Storage ID of the bundle. pblk_out returns the restored bundle.
 `static int BPL_offload_delete(BPL_file_offload_svc_t *svc, bp_sid_t sid)`|Delete a bundle from persistent storage by Storage ID.
+`static int BPL_file_offload_scan(BPL_file_offload_svc_t *svc, BPLIB_cache_module_valtype_t vt, const void **val)`|Scans persistent storage for stored bundles. Returns an iterable list of bundles in "val". vt is a data structure type for an iterable list of bundles.
 
 **Based on file_offload.c bplib/store/file_offload.c**
 
