@@ -21,6 +21,9 @@ else()
     set(BPLIB_STANDALONE_BUILD_MODE ON)
 endif()
 
+# TODO Remove override for standalone build mode
+set(BPLIB_STANDALONE_BUILD_MODE ON)
+
 # The functional test program (bpcat) will only be built by default in a standalone build using POSIX OS adapter
 # This is because the bpcat tool relies on direct file handle I/O as well as signals and other POSIX concepts
 if (BPLIB_STANDALONE_BUILD_MODE AND BPLIB_OS_LAYER STREQUAL POSIX)
@@ -91,11 +94,10 @@ add_subdirectory(lib)
 add_subdirectory(mpool)
 add_subdirectory(cache)
 add_subdirectory(v7)
+add_subdirectory(stor/store)
 
 # v7 implementation parts
 list(APPEND BPLIB_SRC
-  store/file_offload.c
-
   $<TARGET_OBJECTS:bplib_os>
   $<TARGET_OBJECTS:bplib_common>
   $<TARGET_OBJECTS:bplib_cache>
