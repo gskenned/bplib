@@ -111,7 +111,7 @@ CFS_REPO is the folder containing the working copy of the https://github.com/nas
    git submodule init
    git submodule update
    git clone https://github.com/nasa/bp "${BP_SOURCE}"
-   git clone https://github.com/nasa/bpib "${BPLIB_SOURCE}"
+   git clone https://github.com/nasa/bplib "${BPLIB_SOURCE}"
 ```
 
 Most of the example scripts include `cd $CFS_HOME` because the example scripts should be copied to $CFS_HOME to be run.
